@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="ucf.assignments.toDo">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TextField alignment="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="64.0" prefWidth="137.0" text="Mr. toDO">
+               <font>
+                  <Font name="Futura Medium" size="24.0" />
+               </font>
+            </TextField>
+            <ListView layoutX="12.0" layoutY="132.0" prefHeight="252.0" prefWidth="212.0" />
+            <TextField layoutX="14.0" layoutY="100.0" prefHeight="26.0" prefWidth="68.0" text="All Lists:">
+               <font>
+                  <Font name="Futura Medium" size="13.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TextField layoutX="22.0" layoutY="14.0" prefHeight="52.0" prefWidth="310.0" text="ToDo List Title">
+               <font>
+                  <Font name="Futura Medium" size="24.0" />
+               </font>
+            </TextField>
+            <TableView layoutX="22.0" layoutY="99.0" prefHeight="284.0" prefWidth="310.0">
+              <columns>
+                <TableColumn text="Title" />
+                <TableColumn prefWidth="152.0" text="Description" />
+                  <TableColumn prefWidth="77.0" text="Due" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

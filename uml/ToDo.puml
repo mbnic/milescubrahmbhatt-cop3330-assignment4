@@ -1,0 +1,74 @@
+ @startuml
+'https://plantuml.com/class-diagram
+
+class ToDo_Controller {
+    addListClicked()
+    removeListClicked()
+    changeListTitleClicked()
+    displayListClicked()
+    displayCompletedClicked()
+    displayIncompleteClicked()
+
+    addItemClicked()
+    removeItemClicked()
+    editItemDescriptionClicked()
+    changeItemDueDateClicked()
+    markCompleteClicked()
+}
+
+class listManager {
+    list <todoList> all_Lists
+
+    findList()
+
+    loadList()
+    loadMultiLists()
+    saveAllLists()
+    saveSpecificList()
+
+    addList()
+    removeList()
+    changeListTitle()
+    displayList()
+    displayCompleted()
+    displayIncomplete()
+}
+
+class todoList {
+    String title
+    map<INT, item> todoITEMS
+
+    addItem()
+    removeItem()
+    editItemDescription()
+    changeItemDueDate()
+    markComplete()
+}
+
+
+class item {
+    String title
+    String dueDate
+    String description
+    boolean complete = false
+
+    getters()
+    setters()
+}
+
+
+class todoListApp {
+    main()
+    start()
+}
+
+
+
+
+javafx.Application <|-- todoListApp
+todoListApp <|-- ToDo_Controller
+ToDo_Controller <|-- listManager
+listManager <|-- todoList
+todoList -- item
+
+@enduml
